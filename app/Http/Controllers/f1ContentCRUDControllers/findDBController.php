@@ -3,7 +3,7 @@ namespace App\Http\Controllers\f1ContentCRUDControllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\F1_Larav;
+use App\Models\F1_larav;
 use DateTime;
 
 class findDBController extends Controller
@@ -23,13 +23,13 @@ class findDBController extends Controller
             }
 
              // Daten aus der Datenbank abrufen
-            $data = F1_Larav::where('driverId', 'like', "%$search%")
-            ->orWhere('url', 'like', "%$search%")
-            ->orWhere('givenName', 'like', "%$search%")
-            ->orWhere('familyName', 'like', "%$search%")
-            ->orWhere('dateOfBirth', 'like', "%$search%")
-            ->orWhere('familyName', 'like', "%$search%")
-            ->orWhere('nationality', 'like', "%$search%")->get();
+            $data = F1_Larav::where('driverId', 'like', "$search")
+            ->orWhere('url', 'like', "$search")
+            ->orWhere('givenName', 'like', "$search")
+            ->orWhere('familyName', 'like', "$search")
+            ->orWhere('dateOfBirth', 'like', "$search")
+            ->orWhere('familyName', 'like', "$search")
+            ->orWhere('nationality', 'like', "$search")->get();
 
             return view('content', ['dataArray' => $data]);
 
