@@ -1,0 +1,45 @@
+.window{
+    background-color: #212529;
+    border: none;
+}
+
+.main-container{
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    background-color: black;
+    width: 100%;
+    height: 61.5vh;
+}
+
+.logo-container{
+    display: relative;
+    margin:0 auto;
+}
+
+.logo{
+    color: white
+}
+
+.text{
+    display: block;
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+
+#loginbutton{
+    display: block;
+    margin: 0 auto;
+    color:#5d6164;
+    border-width: 1px;
+    border-color:#076e82;
+    background-color: #000000;
+}
+
+#loginbutton:hover{
+    color: rgb(0, 0, 0);
+    border-width: 1px;
+    border-color:#6fddf3;
+    background-color:#6fddf3 ;
+}
+

@@ -1,0 +1,14 @@
+.checkbutton-new{
+    display: inline;
+    padding-right: 1rem;
+}
+
+.checkbutton-edit{
+    display: inline;
+    padding-right: 1rem;
+}
+
+.checkbutton-delete{
+    display: inline;
+    padding-right: 1rem;
+}

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand">LuLeCon</a>
+        <button class="navbar-toggler" id="navbarSupportedContent" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ $url = action('App\Http\Controllers\Controller@home') }}">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Driver
+                    </a>
+                    <ul class="dropdown-menu dark">
+                        <li><a class="dropdown-item"
+                                href="{{ $url = action('App\Http\Controllers\f1ContentCRUDControllers\loadDBController@loadDBContent') }}">Show
+                                Driver</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Add Driver</a></li>
+                        <li><a class="dropdown-item" href="#">Edit Driver/s</a></li>
+                        <li><a class="dropdown-item" href="#">Delete Driver/s</a></li>
+                        <hr class="dropdown-divider">
+                        <li><a class="dropdown-item"
+                                href="{{ $url = action('App\Http\Controllers\f1ContentCRUDControllers\loadAPIController@loadF1API') }}">load
+                                Drivers</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form action="{{ action('App\Http\Controllers\f1ContentCRUDControllers\findDBController@searchDB') }}"
+                method="post" class="form-inline my-2 my-lg-0" accept-charset="UTF-8">
+                @csrf
+                <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search Drivers"
+                    aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" value="searchButton">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>

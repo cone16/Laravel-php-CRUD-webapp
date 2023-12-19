@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+#navbar{
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+
+.content-sidebar-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.content{
+    width: 77%;
+    height: auto;
+    min-height: 76.5vh;
+    padding:1rem 1rem 0rem 1rem;
+}
+
+.sidebar{
+    min-height: 76.5vh;
+    width: 23%;
+    min-height: 76.5vh;
+    padding:1rem 1rem 1rem 0rem;
+}
+
+.footer{
+    flex-direction:column;
+    width: 100%;
+    text-align: center;
+    padding: 0rem 1rem 1rem 1rem;
+}

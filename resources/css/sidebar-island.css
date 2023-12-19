@@ -1,0 +1,58 @@
+.sidebar-island{
+    display: block;
+    position: relative;
+    margin:0 auto;
+    background-color:#212529;
+    color: white;
+    border: none;
+    border-top:5rem;
+    padding: 1rem;
+}
+
+#input-field{
+    border-radius: 0px;
+    border-color: #363636;
+    color: rgb(255, 255, 255);
+    background-color: rgb(33, 33, 33);
+}
+
+#input-field::placeholder {
+    color: rgb(120, 120, 120);
+}
+
+#input-field-white{
+    color: rgb(255, 255, 255);
+    background-color: white;
+}
+
+.accordion-body{
+    background-color:#212529;
+}
+
+.accordion-body label{
+    color: white;
+}
+
+#edit-button{
+    background-color:#212529;
+    color:#125CC8;
+}
+
+#edit-button:hover{
+    background-color:#125CC8;
+    color: white;
+}
+
+#add-button{
+    background-color:#212529;
+    color:#125CC8;
+}
+
+#add-button:hover{
+    background-color:#125CC8;
+    color: white;
+}
+
+
+
+
