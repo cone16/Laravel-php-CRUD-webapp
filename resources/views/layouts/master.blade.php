@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>LuLeCon</title>
-    @include('style')
     @vite(['resources/js/app.js', 'resources/sass/app.scss'])
 
 </head>
