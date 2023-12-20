@@ -56,36 +56,43 @@
                                 data-bs-parent="#accordionExample{{ $entry['id'] }}">
                                 <div class="accordion-body">
                                     @csrf
-                                    <input type="hidden" name="id[]" value="{{ $entry['id'] }}">
+                                    <!-- hidden field to count and transfer the id's-->
+                                    <input type="hidden" type="text" name="id[]" value="{{ $entry['id'] }}">
                                     <p style="color: white">ID: {{ $entry['id'] }}</p>
                                     <br>
+                                    <!-- driverId -->
                                     <label for="driver-id" id=" {{ $entry['id'] }}">Driver Id: </label>
                                     <input id="driver-id input-field-white" class="form-control mr-sm-2" type="text"
                                         name="driver-id[]" style="color: white;"
                                         placeholder="{{ $entry['driverId'] }}"></input>
                                     <br>
+                                    <!-- url -->
                                     <label for="url" id=" {{ $entry['id'] }}">URL:</label>
                                     <input id="url input-field-white" class="form-control mr-sm-2" type="text"
                                         name="url[]" style="color: white;" placeholder="{{ $entry['url'] }}"></input>
                                     <br>
+                                    <!-- givenName -->
                                     <label for="given-name" id=" {{ $entry['id'] }}">First Name:</label>
                                     <input id="given-name input-field-white" class="form-control mr-sm-2" type="text"
                                         name="given-name[]" style="color: white;"
                                         placeholder="{{ $entry['givenName'] }}"></input>
                                     <br>
+                                    <!-- familyName-->
                                     <label for="family-name" id=" {{ $entry['id'] }}">Last Name:</label>
                                     <input id="family-name input-field-white" class="form-control mr-sm-2"
                                         type="text" name="family-name[]" style="color: white;"
                                         placeholder="{{ $entry['familyName'] }}"></input>
                                     <br>
+                                    <!-- dateOfBirth -->
                                     <label for="date-of-birth" id=" {{ $entry['id'] }}">Birthday:</label>
                                     <input id="date-of-birth input-field-white" class="form-control mr-sm-2"
                                         type="text" name="date-of-birth[]" style="color: white;"
                                         placeholder="{{ $entry['dateOfBirth'] }}"></input>
                                     <br>
+                                    <!-- nationality -->
                                     <label for="nationality" id=" {{ $entry['id'] }}">Nationality:</label>
                                     <input id="nationality input-field-white" class="form-control mr-sm-2"
-                                        type="text" name="nationality[]" style="color: white;"
+                                        type="text" name="nationality[]" style="color: white;" value=""
                                         placeholder="{{ $entry['nationality'] }}"></input>
                                     <br>
                                     <p style="color: white">Please edit carefully. After the 'tab' on the 'Save'

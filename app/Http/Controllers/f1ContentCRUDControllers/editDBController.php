@@ -62,47 +62,48 @@ class editDBController extends Controller
         }
 
         // save changes to the db entrys
-        public function saveChangesToDB(request $request){
+        public function saveChangesToDB(Request $request){
 
-            $updatedData = [];
-            // finde heraus, welche einträge markiert wurden
-            // verbinde die einträge des formulars mit den id's und erstelle ein Array
+            // find out wich entrys were checked
+            $ids =[];
 
-            $ids = $request->input('id', []);
-            $driverIds = $request->input('driver-id', []);
-            $urls = $request->input('url', []);
-            $givenNames = $request->input('given-name', []);
-            $familyNames = $request->input('family-name', []);
-            $dateOfBirths = $request->input('date-of-birth', []);
-            $nationalitys = $request->input('nationality', []);
+            // get Data from all form Elements
+            $driverId = $request->input('driver-id');
+            $url = $request->input('url');
+            $givenName = $request->input('given-name');
+            $familyName = $request->input('family-name');
+            $dateOfBirth = $request->input('date-of-birth');
+            $nationality = $request->input('nationality');
 
+            // join the entrys of the formular with the id's and update the DB entrys
+            $id = $request->input('id', []);
 
+            foreach($id as $index => $value){
 
-            error_log(print_r($ids));
+                // If any of the form input is empty don't update.
+                $updateData = [];
+                if (!empty($driverId[$index])) {
+                    $updateData['driverId'] = $driverId[$index];
+                }
+                if (!empty($url[$index])) {
+                    $updateData['url'] = $url[$index];
+                }
+                if (!empty($givenName[$index])) {
+                    $updateData['givenName'] = $givenName[$index];
+                }
+                if (!empty($familyName[$index])) {
+                    $updateData['familyName'] = $familyName[$index];
+                }
+                if (!empty($dateOfBirth[$index])) {
+                    $updateData['dateOfBirth'] = $dateOfBirth[$index];
+                }
+                if (!empty($nationality[$index])) {
+                    $updateData['nationality'] = $nationality[$index];
+                }
 
-            for($i = 0; $i < count($ids); $i++){
-                 $arr = array([$ids[$i],
-                               $driverIds[$i],
-                               $urls[$i],
-                               $givenNames[$i],
-                               $familyNames[$i],
-                               $dateOfBirths[$i],
-                               $nationalitys[$i]]);
-                $updatedData [] = $arr;
+                // change Data.
+                F1_Larav::where('id', $value)->update($updateData);
             }
-
-            error_log(print_r($updatedData));
-
-
-
-
-            // suche die einträge
-            /*foreach($ids as $id){
-                $dataToUpdate = F1_larav::where('id', $id)->update(['driverId' => $request->input('driver-id')])->
-                                                                    update([ 'url' => $request->input('url')])->
-                                                                    update([ 'given-name' => $request->])
-            }*/
-            // ändere die einträge
 
             return redirect()->action('App\Http\Controllers\f1ContentCRUDControllers\loadDBController@loadDBContent');
         }
