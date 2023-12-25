@@ -14,17 +14,17 @@ body{
     padding-top: 1rem;
 }
 
-.content-sidebar-container{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
 .content{
     width: 77%;
     height: auto;
     min-height: 76.5vh;
     padding:1rem 1rem 0rem 1rem;
+}
+
+.content-sidebar-container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
 .sidebar{
@@ -39,4 +39,28 @@ body{
     width: 100%;
     text-align: center;
     padding: 0rem 1rem 1rem 1rem;
+}
+
+@media only screen and (max-width: 600px){
+
+
+    .content{
+        width: 100%;
+        height: auto;
+        min-height: 76.5vh;
+        padding:1rem 1rem 0rem 1rem;
+    }
+
+    .content-sidebar-container{
+        display: flex;
+        flex-direction:column-reverse;
+        width: 100%;
+    }
+
+    .sidebar{
+        width: 100%;
+        height: auto;
+        padding:1rem 1rem 0rem 1rem;
+    }
+
 }

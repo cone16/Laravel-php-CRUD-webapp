@@ -8,6 +8,10 @@ p{
     font-size: small;
 }
 
+#table{
+    font-size: 12px;
+  }
+
 #btn{
     border-radius: 0px;
     color: white;
@@ -20,3 +24,48 @@ p{
     color: black;
 }
 
+@media only screen and (max-width: 600px) {
+
+    #table{
+      width: 100%;
+      font-size: 13px;
+      background-color: black;
+    }
+
+    tr{
+        display: flex;
+        flex-wrap:wrap;
+        background-color: black;
+    }
+
+    th{
+        flex: 1;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        background-color: black;
+    }
+
+    td {
+        flex: 1;
+        box-sizing: border-box;
+        background-color: black;
+        border-color: black;
+        border-style: 1rem solid;
+      }
+
+      .btn-container{
+        padding-bottom:1.5em;
+      }
+
+    #btn{
+        display:flexbox;
+        flex-direction: row;
+        flex-grow: 1;
+        flex:1;
+        width: 25%;
+        align-self: stretch;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+}

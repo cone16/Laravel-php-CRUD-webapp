@@ -7,27 +7,26 @@
             <p style="text-align: center;">No data found!</p>
         @else
             <div class="table-island">
-                <table class="table table-striped table-dark" style="font-size: 12px;">
+                <table id="table" class="table table-striped table-dark">
                     <form name="checkform"
                         action="{{ action('App\Http\Controllers\f1ContentCRUDControllers\editDBController@editDBEntry') }}"
                         method="post" accept-charset="UTF-8">
                         @csrf
                         <thread class="thead-dark">
-                            <tr>
+                            <tr class="btn-container">
                                 <a class="btn btn-outline-success my-2 my-sm-0" name="add-entry" type="button"
                                     value="submit-checked" for="checkform" id="btn"
                                     href="{{ action('App\Http\Controllers\f1ContentCRUDControllers\addToDBController@addDBEntryField') }}">Add
-                                    Entry</a>
+                                </a>
                                 <button class="btn btn-outline-success my-2 my-sm-0" name="submit_edit" type="submit"
                                     value="submit-checked" for="checkform" id="btn">Edit
-                                    Entrys</button>
+                                </button>
                                 <button class="btn btn-outline-success my-2 my-sm-0" name="submit_delete" type="submit"
                                     value="submit-checked" for="checkform" id="btn">Delete
-                                    Entrys</button>
+                                </button>
                                 <a class="btn btn-outline-success my-2 my-sm-0" name="refresh" value="refresh"
                                     id="btn"
-                                    href="{{ $url = action('App\Http\Controllers\f1ContentCRUDControllers\loadDBController@loadDBContent') }}">Refresh
-                                    Entrys</a>
+                                    href="{{ $url = action('App\Http\Controllers\f1ContentCRUDControllers\loadDBController@loadDBContent') }}">Refresh</a>
                             </tr>
                             <tr style="height: 3rem; font-size: 14px;">
                                 <th>Opt.</th>
