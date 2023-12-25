@@ -31,7 +31,9 @@ class findDBController extends Controller
             ->orWhere('familyName', 'like', "$search")
             ->orWhere('nationality', 'like', "$search")->get();
 
-            return view('content', ['dataArray' => $data]);
+            $switch = 'DEFAULT';
+
+            return view('content', ['dataArray' => $data, 'switch' => $switch]);
 
     }
 }
