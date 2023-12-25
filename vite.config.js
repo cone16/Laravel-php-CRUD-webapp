@@ -5,7 +5,7 @@ import ViteSassPlugin from 'vite-plugin-sass';
 
 export default defineConfig({
     plugins: [
-        [ViteSassPlugin()],
+        //ViteSassPlugin(),
         laravel({
             input: [
                 'resources/sass/app.scss',
