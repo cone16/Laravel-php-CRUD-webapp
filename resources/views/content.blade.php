@@ -30,8 +30,8 @@
                             </tr>
                             <tr style="height: 3rem; font-size: 14px;">
                                 <th>Opt.</th>
-                                <th>#ID</th>
-                                <th>DriverID</th>
+                                <th># ID</th>
+                                <th>Driver ID</th>
                                 <th>Wiki URL</th>
                                 <th>Name</th>
                                 <th>Family Name</th>
