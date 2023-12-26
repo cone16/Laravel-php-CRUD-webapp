@@ -4,6 +4,10 @@ html{
     font-size: medium;
 }
 
+a{
+    color: rgb(157, 206, 255);
+}
+
 p{
     font-size: small;
 }
@@ -24,7 +28,7 @@ p{
     color: black;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 834px) {
 
     #table{
       width: 100%;
@@ -68,6 +72,13 @@ p{
         padding-top: 1em;
         padding-bottom: 1em;
         margin-bottom: 1em;
+    }
+
+    .truncate-url {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 150px; /* Ändere dies auf die gewünschte Breite oder andere Einheiten */
     }
 
 }
