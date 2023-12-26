@@ -17,7 +17,7 @@ body{
 .content{
     width: 77%;
     height: auto;
-    min-height: 76.5vh;
+    min-height: 74.0vh;
     padding:1rem 1rem 0rem 1rem;
 }
 
@@ -28,7 +28,6 @@ body{
 }
 
 .sidebar{
-    min-height: 76.5vh;
     width: 23%;
     min-height: 76.5vh;
     padding:1rem 1rem 1rem 0rem;
@@ -41,13 +40,13 @@ body{
     padding: 0rem 1rem 1rem 1rem;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 834px){
 
 
     .content{
         width: 100%;
         height: auto;
-        //min-height: 76.5vh;
+        min-height: 1rem;
         padding:1rem 1rem 0rem 1rem;
     }
 
@@ -70,6 +69,14 @@ body{
 
     .sidebar-island{
         flex: 3;
+    }
+
+    .footer{
+        flex-direction:column;
+        width: 100%;
+        text-align: center;
+        margin-top: auto;
+        padding: 0rem 1rem 1rem 1rem;
     }
 
 }
