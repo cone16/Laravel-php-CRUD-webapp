@@ -30,6 +30,7 @@ p{
       width: 100%;
       font-size: 13px;
       background-color: black;
+      page-break-inside: auto;
     }
 
     tr{
@@ -54,7 +55,7 @@ p{
       }
 
       .btn-container{
-        padding-bottom:1.5em;
+        padding-bottom:1.3em;
       }
 
     #btn{
@@ -66,6 +67,7 @@ p{
         align-self: stretch;
         padding-top: 1em;
         padding-bottom: 1em;
+        margin-bottom: 1em;
     }
 
 }

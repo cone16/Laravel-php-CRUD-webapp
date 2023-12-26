@@ -47,7 +47,7 @@ body{
     .content{
         width: 100%;
         height: auto;
-        min-height: 76.5vh;
+        //min-height: 76.5vh;
         padding:1rem 1rem 0rem 1rem;
     }
 
@@ -58,9 +58,18 @@ body{
     }
 
     .sidebar{
+        display: flex;
+        justify-content: space-between;
+        flex-direction:row;
+        flex-flow: row;
+        flex-grow: 3;
         width: 100%;
         height: auto;
         padding:1rem 1rem 0rem 1rem;
+    }
+
+    .sidebar-island{
+        flex: 3;
     }
 
 }
