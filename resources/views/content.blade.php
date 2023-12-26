@@ -47,7 +47,9 @@
                                             style="margin-left: 1rem; transform: scale(140%)"></th>
                                     <th>{{ $entry['id'] }}</th>
                                     <th>{{ $entry['driverId'] }}</th>
-                                    <th>{{ $entry['url'] }}</th>
+                                    <th><a href="{{ $entry['url'] }}">
+                                            <p class="truncate-url">{{ $entry['url'] }}</p>
+                                        </a></th>
                                     <th>{{ $entry['givenName'] }}</th>
                                     <th>{{ $entry['familyName'] }}</th>
                                     <th>{{ str_replace('-', '.', date('d-m-Y', strtotime($entry['dateOfBirth']))) }}</th>
